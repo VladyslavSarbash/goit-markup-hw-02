@@ -129,7 +129,7 @@ body {
   color: #000000;
 }
 /* Хедер */
-.link-header {
+.link-header{
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -167,4 +167,7 @@ body {
 
 .address {
     font-style: normal;
+}
+.current {
+    color: var(--button-color);
 }

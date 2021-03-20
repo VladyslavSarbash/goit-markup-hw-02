@@ -10,6 +10,16 @@
 
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -29,6 +39,53 @@ body {
   overflow: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: tomato; */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.address {
+  font-style: normal;
+  color: var(--text-white-color);
+}
+
+.menu {
+  display: inline-flex;
+  margin-left: 0;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+/* Hero */
+
+.hero {
+ min-height: 100vh;
+ padding-top: 200px;
+ padding-bottom: 200px;
+}
+
 /* Ссылки и списки */
 .link {
   text-decoration: none;
@@ -42,6 +99,9 @@ body {
 
 .list {
   list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 /* Кнопки */
 .button {
@@ -70,6 +130,9 @@ body {
   color: var(--text-white-color);
   background-color: var(--button-color);
   cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+
 }
 
 .button-hero:hover,
@@ -85,6 +148,10 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-white-color);
+  width: 696px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
 }
 
 .page-title {
@@ -101,8 +168,60 @@ body {
   line-height: 1.17;
   text-align: center;
   color: var(--title-color);
+  margin-bottom: 50px;
 }
+
+.container .main-list {
+  display: flex;
+  padding-bottom: 94px;
+}
+
+.main-list .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* Особенности */
+
+.container .list-page {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.page-item {
+  max-width: 270px;
+}
+
+.page-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* Команда */
+
+.container .list-team {
+  display: flex;
+}
+
+.team-container {
+  padding-bottom: 94px;
+}
+
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.container .team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.main-team {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .team {
   font-size: 16px;
   line-height: 1.19;
@@ -126,13 +245,24 @@ body {
 .logo {
   color: var(--button-color);
 }
-.logo-title {
+.logo-header,
+.logo-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: #000000;
 }
+
+.logo-header {
+  margin-right: 93px;
+}
+
+.logo-footer {
+  display: block;
+  margin-bottom: 20px;
+}
+
 /* Хедер */
 .link-header{
   font-weight: 500;
@@ -147,13 +277,42 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-text-color);
 }
+
+.contact-header:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ECECEC;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
 /* Футер */
 .footer {
   color: var(--text-white-color);
 }
 
+
 .link-footer {
   color: var(--address-footer-color);
+}
+
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.list-footer:not(:last-child) {
+  margin-bottom: 9px;
 }
 /* Портфолио */
 
@@ -170,10 +329,15 @@ body {
   line-height: 1.87;
 }
 
-.address {
-    font-style: normal;
-    color: var(--text-white-color);
+.container .btn .list,
+.container .content .list {
+  display: flex;
 }
+
+.content .list {
+  flex-wrap: wrap;
+}
+
 .current {
-    color: var(--button-color);
+  color: var(--button-color);
 }
